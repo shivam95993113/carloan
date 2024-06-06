@@ -1,0 +1,134 @@
+[2024-06-06 12:14:06,831] 25 root - INFO - Data Ingestion method starts
+[2024-06-06 12:14:07,558] 29 root - INFO - Dataset read as pandas Dataframe
+[2024-06-06 12:14:10,551] 35 root - INFO - Train test split
+[2024-06-06 12:14:14,032] 41 root - INFO - Ingestion of data is completed
+[2024-06-06 12:14:14,895] 132 root - INFO - Read train and test data completed
+[2024-06-06 12:14:14,925] 133 root - INFO - Train Dataframe Head : 
+         ID Client_Income  Car_Owned  Bike_Owned  Active_Loan  House_Own  Child_Count Credit_Amount Loan_Annuity Accompany_Client Client_Income_Type Client_Education Client_Marital_Status Client_Gender Loan_Contract_Type Client_Housing_Type Population_Region_Relative Age_Days Employed_Days Registration_Days ID_Days  Own_House_Age  Mobile_Tag  Homephone_Tag  Workphone_Working Client_Occupation  Client_Family_Members  Cleint_City_Rating  Application_Process_Day  Application_Process_Hour Client_Permanent_Match_Tag Client_Contact_Work_Tag       Type_Organization  Score_Source_1  Score_Source_2 Score_Source_3  Social_Circle_Default  Phone_Change  Credit_Bureau  Default
+0  12121351         15750        1.0         0.0          1.0        1.0          0.0      30522.15          NaN         Relative            Service        Secondary                     S        Female                 CL                Home                   0.031329    10951          1871              9017    3500           10.0           1              0                  0          Laborers                    1.0                 2.0                      NaN                       NaN                        Yes                     Yes  Business Entity Type 3        0.247485        0.728828    0.466864006                 0.1082         375.0            2.0        0
+1  12183314         13500        1.0         1.0          1.0        0.0          1.0      57148.65      2434.05            Alone         Commercial        Secondary                     M        Female                 CL                Home                    0.01885    20215          1156              5050    3709           13.0           1              0                  0          Laborers                    3.0                 2.0                      4.0                      16.0                        Yes                     Yes  Business Entity Type 3        0.770868        0.500379      0.6577838                    NaN         839.0            5.0        0
+2  12116092       20250.0        0.0         0.0          0.0        0.0          0.0       87098.4      3407.85            Alone            Service        Secondary                     M          Male                 CL                Home                    0.02461      NaN         10231             10009    4457            NaN           1              0                  0               NaN                    2.0                 2.0                      2.0                      14.0                        Yes                      No                Medicine             NaN        0.562386    0.394495405                    NaN         692.0            5.0        0
+3  12164737          6750        0.0         1.0          0.0        0.0          0.0       37900.8       3705.3            Alone            Retired        Secondary                     M          Male                 CL                Home                    0.00496    21169           NaN              3849    4495            NaN           1              0                  1               NaN                    2.0                 2.0                      0.0                      13.0                        Yes                     Yes                     XNA             NaN        0.079941            NaN                 0.0536           0.0            NaN        0
+4  12185174         11250        0.0         0.0          0.0        1.0          0.0      107820.0      2965.05            Alone            Service        Secondary                     M          Male                 CL                Home                    0.00702    20890           765              4018    4018            NaN           1              0                  0          Security                    2.0                 2.0                      5.0                      13.0                        Yes                      No             Agriculture             NaN        0.506589    0.344155007                    NaN          18.0            0.0        0
+[2024-06-06 12:14:14,947] 134 root - INFO - Test Dataframe Head  : 
+         ID Client_Income  Car_Owned  Bike_Owned  Active_Loan  House_Own  Child_Count Credit_Amount Loan_Annuity Accompany_Client Client_Income_Type Client_Education Client_Marital_Status Client_Gender Loan_Contract_Type Client_Housing_Type Population_Region_Relative Age_Days Employed_Days Registration_Days ID_Days  Own_House_Age  Mobile_Tag  Homephone_Tag  Workphone_Working Client_Occupation  Client_Family_Members  Cleint_City_Rating  Application_Process_Day  Application_Process_Hour Client_Permanent_Match_Tag Client_Contact_Work_Tag       Type_Organization  Score_Source_1  Score_Source_2  Score_Source_3  Social_Circle_Default  Phone_Change  Credit_Bureau  Default
+0  12118453         18900        0.0         1.0          NaN        1.0          0.0       71107.2       2988.9            Alone            Service        Secondary                     M          Male                 CL                Home                   0.020246    14402          1059              6245    1548            NaN           1              0                  0             Sales                    2.0                 3.0                      2.0                      12.0                         No                     Yes           Self-employed        0.179616        0.359963        0.524496                 0.0062         871.0            5.0        1
+1  12154387         13500        0.0         0.0          0.0        0.0          0.0       18000.0          900            Alone         Commercial        Secondary                     M        Female                 RL                Home                   0.015221    16202          1165              5966    4086            NaN           1              1                  1             Sales                    2.0                 2.0                      4.0                       9.0                        Yes                     Yes           Self-employed             NaN        0.486939             NaN                    NaN         368.0            2.0        0
+2  12118947         13500        NaN         0.0          1.0        1.0          0.0       49000.5      2974.05            Alone            Service        Secondary                     M          Male                 CL              Rental                   0.019689    19164          1149               496     NaN           23.0           1              0                  0          Laborers                    2.0                 2.0                      3.0                      12.0                         No                     Yes  Business Entity Type 3        0.829911        0.514900        0.187389                 0.0536         249.0            1.0        1
+3  12185579          9000        1.0         1.0          0.0        1.0          0.0       69004.8       2225.7            Alone            Service       Graduation                     M          Male                 CL                Home                   0.035792    14864           NaN              5423    4741           10.0           1              0                  1           Drivers                    2.0                 2.0                      4.0                      11.0                        Yes                      No  Business Entity Type 1        0.522802        0.694751        0.609276                    NaN         573.0            3.0        0
+4  12120181        9900.0        0.0         1.0          0.0        1.0          0.0       62241.3       3389.4          Partner            Service        Secondary                     M          Male                 CL                Home                   0.022625    13545          1062              7644    2721            NaN           1              0                  0             Sales                    2.0                 2.0                      3.0                      14.0                        Yes                     Yes           Self-employed        0.313626        0.723982        0.631355                 0.0876         820.0            5.0        0
+[2024-06-06 12:14:14,947] 136 root - INFO - Starting data cleaning process for train and test datasets
+[2024-06-06 12:14:14,947] 93 root - INFO - Starting data cleaning process
+[2024-06-06 12:14:14,947] 73 root - INFO - Cleaning special characters from the dataset
+[2024-06-06 12:14:16,372] 100 root - INFO - Null Values Analysis:
+Client_Income                  2577
+Car_Owned                      2503
+Bike_Owned                     2549
+Active_Loan                    2564
+House_Own                      2592
+Child_Count                    2545
+Credit_Amount                  2532
+Loan_Annuity                   3376
+Accompany_Client               1193
+Client_Income_Type             2563
+Client_Education               2560
+Client_Marital_Status          2425
+Client_Gender                  1690
+Loan_Contract_Type             2584
+Client_Housing_Type            2581
+Population_Region_Relative     3441
+Age_Days                       2478
+Employed_Days                  2560
+Registration_Days              2540
+ID_Days                        4226
+Own_House_Age                 56104
+Client_Occupation             28972
+Client_Family_Members          1662
+Cleint_City_Rating             1712
+Application_Process_Day        1717
+Application_Process_Hour       2552
+Type_Organization              2543
+Score_Source_1                48165
+Score_Source_2                 4019
+Score_Source_3                18936
+Social_Circle_Default         43250
+Phone_Change                   2591
+Credit_Bureau                 13074
+dtype: int64
+[2024-06-06 12:14:16,560] 119 root - INFO - Null Values After Cleaning:
+Child_Count                  2545
+Accompany_Client             1193
+Client_Income_Type           2563
+Client_Education             2560
+Client_Marital_Status        2425
+Loan_Contract_Type           2584
+Own_House_Age               56104
+Client_Family_Members        1662
+Cleint_City_Rating           1712
+Application_Process_Day      1717
+Application_Process_Hour     2552
+Phone_Change                 2591
+dtype: int64
+[2024-06-06 12:14:16,560] 93 root - INFO - Starting data cleaning process
+[2024-06-06 12:14:16,560] 73 root - INFO - Cleaning special characters from the dataset
+[2024-06-06 12:14:17,200] 100 root - INFO - Null Values Analysis:
+Client_Income                  1045
+Car_Owned                      1078
+Bike_Owned                     1075
+Active_Loan                    1071
+House_Own                      1069
+Child_Count                    1093
+Credit_Amount                  1105
+Loan_Annuity                   1450
+Accompany_Client                553
+Client_Income_Type             1138
+Client_Education               1085
+Client_Marital_Status          1048
+Client_Gender                   723
+Loan_Contract_Type             1067
+Client_Housing_Type            1106
+Population_Region_Relative     1427
+Age_Days                       1139
+Employed_Days                  1106
+Registration_Days              1091
+ID_Days                        1759
+Own_House_Age                 23991
+Client_Occupation             12463
+Client_Family_Members           748
+Cleint_City_Rating              697
+Application_Process_Day         711
+Application_Process_Hour       1111
+Type_Organization              1066
+Score_Source_1                20670
+Score_Source_2                 1667
+Score_Source_3                 7985
+Social_Circle_Default         18678
+Phone_Change                   1073
+Credit_Bureau                  5466
+dtype: int64
+[2024-06-06 12:14:17,295] 119 root - INFO - Null Values After Cleaning:
+Child_Count                  1093
+Accompany_Client              553
+Client_Income_Type           1138
+Client_Education             1085
+Client_Marital_Status        1048
+Loan_Contract_Type           1067
+Own_House_Age               23991
+Client_Family_Members         748
+Cleint_City_Rating            697
+Application_Process_Day       711
+Application_Process_Hour     1111
+Phone_Change                 1073
+dtype: int64
+[2024-06-06 12:14:17,295] 141 root - INFO - Data cleaning completed
+[2024-06-06 12:14:17,295] 143 root - INFO - Obtaining preprocessing object
+[2024-06-06 12:14:17,295] 27 root - INFO - Data Transformation initiated
+[2024-06-06 12:14:17,295] 39 root - INFO - Pipeline Initiated
+[2024-06-06 12:14:17,295] 63 root - INFO - Pipeline Completed
+[2024-06-06 12:14:18,217] 160 root - INFO - Applying preprocessing object on training and testing datasets.
+[2024-06-06 12:14:18,233] 170 root - INFO - Processor pickle is created and saved
+[2024-06-06 12:14:18,267] 20 root - INFO - Splitting train and test data into features and target
+[2024-06-06 12:14:18,267] 35 root - INFO - Evaluating models
+[2024-06-06 12:15:28,349] 37 root - INFO - Model performance: {'Logistic Regression': {'F1 Score': 0.8811308749757593, 'Precision': 0.8457236682755543, 'Recall': 0.9196323549525399, 'ROC AUC': 0.6196448040024694}, 'Random Forest Classifier': {'F1 Score': 0.9000758065857241, 'Precision': 0.9329421828326244, 'Recall': 0.9279481357879475, 'ROC AUC': 0.7018932432511511}}
+[2024-06-06 12:15:28,349] 46 root - INFO - Best model: Random Forest Classifier with score: 0.9000758065857241
+[2024-06-06 12:15:28,349] 50 root - INFO - Saving the best model
